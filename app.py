@@ -66,7 +66,7 @@ def handle_message(event):
         minitue = (dif%3600)//60
         second = dif%60
 
-        reply_text="{}時間{}分{}秒経過したよ。合計勉強時間は{}秒です".format(int(hour),int(minitue),int(second),int(users[userId]["total"]))
+        reply_text="{}時間{}分{}秒経過したよおおお。合計勉強時間は{}秒です".format(int(hour),int(minitue),int(second),int(users[userId]["total"]))
 
     else:
         reply_text=event.message.text
