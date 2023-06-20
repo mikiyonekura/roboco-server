@@ -77,22 +77,11 @@ def handle_message(event):
     elif re.search(pattern, event.message.text):
         match = re.search(pattern, event.message.text)
 
-        if match:
-            hour = match.group(1)
-            minute = match.group(2)
-            print("マッチしました")
-            print("時:", hour)
-            print("分:", minute)
-        else:
-            print("マッチしませんでした")
+        hour = match.group(1)
+        minute = match.group(2)
 
         reply_text="{}時{}分に設定したよ".format(hour,minute)
 
-
-    elif event.message.text == "7時30分":
-        now = time()
-        wakeup = now + 10
-        dif = wakeup - now
 
     else:
         reply_text=event.message.text
