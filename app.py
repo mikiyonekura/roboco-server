@@ -86,6 +86,8 @@ def handle_message(event):
         else:
             print("マッチしませんでした")
 
+        reply_text="{}時{}分に設定したよ".format(hour,minute)
+
 
     elif event.message.text == "7時30分":
         now = time()
