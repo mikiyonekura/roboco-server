@@ -1,6 +1,6 @@
 from flask import Flask, request, abort
 import re
-
+import datetime
 
 
 from linebot import (
@@ -80,7 +80,16 @@ def handle_message(event):
         hour = match.group(1)
         minute = match.group(2)
 
-        reply_text="{}時{}分に設定したよ".format(hour,minute)
+        dt_now = datetime.datetime.now()
+        start_sec = dt_now.hour*3600 + dt_now.minute*60
+        end_sec = int(hour)*3600 + int(minute)*60
+
+        dif = end_sec - start_sec
+
+
+        reply_text="{}時{}分に設定したよ.{}秒後に起きればいいってことだ".format(hour,minute,dif)
+
+
 
 
     else:
