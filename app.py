@@ -22,6 +22,7 @@ handler = WebhookHandler('1f17d0d837d0e1cfa65930e681790687')
 def boot_robot():
     print("ロボ娘起動、起きろーー!!(spresenseにHTTP通信を送る)\nロボ娘起動、起きろーー!!(spresenseにHTTP通信を送る)\nロボ娘起動、起きろーー!!(spresenseにHTTP通信を送る)\nロボ娘起動、起きろーー!!(spresenseにHTTP通信を送る)\n")
 
+
 #設定した時間までの秒数をカウントする関数
 def timer(dif):
     import time
@@ -34,6 +35,7 @@ def timer(dif):
 @app.route("/")
 def test():
     return "OK"
+    print("python request きちゃ")
 
 @app.route("/callback", methods=['POST'])
 def callback():
