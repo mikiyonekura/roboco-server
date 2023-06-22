@@ -34,8 +34,9 @@ def timer(dif):
 
 @app.route("/")
 def test():
-    return "OK"
     print("python request きちゃ")
+    return "OK"
+    
 
 @app.route("/callback", methods=['POST'])
 def callback():
